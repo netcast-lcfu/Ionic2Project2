@@ -8,10 +8,12 @@ import {ContactPage} from '../pages/contact/contact';
 import {HomePage} from '../pages/home/home';
 import {ChatPage} from '../pages/chat/chat';
 import {TabsPage} from '../pages/tabs/tabs';
+import {SignaturepadPage} from '../pages/signaturepad/signaturepad';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import { ApiServiceProvider } from '../providers/api-service/api-service';
+import {ApiServiceProvider} from '../providers/api-service/api-service';
+import {SignaturePadModule} from 'angular2-signaturepad';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     ContactPage,
     HomePage,
     ChatPage,
-    TabsPage
+    TabsPage,
+    SignaturepadPage
   ],
   imports: [
     BrowserModule,
+    SignaturePadModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -33,7 +37,8 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     ContactPage,
     ChatPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SignaturepadPage
   ],
   providers: [
     StatusBar,
