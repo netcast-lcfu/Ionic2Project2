@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>signaturepad</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div id="signaturePadContainer" style="border: 1px solid #cccccc">
+    <signature-pad (onBeginEvent)="drawStart()"
+                   (onEndEvent)="drawComplete()"></signature-pad>
+  </div>
+  <button ion-button block (click)="saveSignature()">保存</button>
+  <button ion-button block (click)="clearSignaturePad()">清空</button>
+
+  <!--<img src="{{imgSrc}}"/>-->
+
+</ion-content>
