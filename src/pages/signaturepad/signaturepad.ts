@@ -7,6 +7,9 @@ import {SignaturePad} from 'angular2-signaturepad/signature-pad';
   templateUrl: 'signaturepad.html',
 })
 export class SignaturepadPage {
+
+  private title:string ;
+
   public signaturePadOptions: Object = { // passed through to szimek/signature_pad constructor
     'minWidth': 5,
     'canvasWidth': 500,
@@ -52,6 +55,7 @@ export class SignaturepadPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignaturepadPage');
+    this.title = this.navParams.get('title');
   }
 
 }

@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
 
+import {LoginPage} from "../pages/login/login";
 import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
 import {HomePage} from '../pages/home/home';
@@ -15,9 +16,11 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {ApiServiceProvider} from '../providers/api-service/api-service';
 import {SignaturePadModule} from 'angular2-signaturepad';
 
+
 @NgModule({
   declarations: [
     MyApp,
+    LoginPage,
     AboutPage,
     ContactPage,
     HomePage,
@@ -33,6 +36,7 @@ import {SignaturePadModule} from 'angular2-signaturepad';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginPage,
     AboutPage,
     ContactPage,
     ChatPage,

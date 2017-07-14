@@ -14,7 +14,7 @@ export class AboutPage {
   }
 
   goToSignaturepad(): void {
-    this.navCtrl.push(SignaturepadPage);
+    this.navCtrl.push(SignaturepadPage,{title:'SignaturePad'});
   }
 
 }

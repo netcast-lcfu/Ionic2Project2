@@ -14,5 +14,15 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label>用户名</ion-label>
+      <ion-input type="text" [(ngModel)]="userInfo.username" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>密码</ion-label>
+      <ion-input type="password" [(ngModel)]="userInfo.password" clearInput></ion-input>
+    </ion-item>
+    <button ion-button (click)="login()" block>登录</button>
+  </ion-list>
 </ion-content>
