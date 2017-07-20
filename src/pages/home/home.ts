@@ -7,6 +7,7 @@ import {NavController, LoadingController, AlertController} from 'ionic-angular';
 })
 
 export class HomePage {
+  public myDate :Object = new Date();
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
 
@@ -27,6 +28,10 @@ export class HomePage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  showDateValue(){
+    console.log(this.myDate);
   }
 
 }

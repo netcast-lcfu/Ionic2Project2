@@ -8,7 +8,7 @@ import {SignaturePad} from 'angular2-signaturepad/signature-pad';
 })
 export class SignaturepadPage {
 
-  private title:string ;
+  public title:string ;
 
   public signaturePadOptions: Object = { // passed through to szimek/signature_pad constructor
     'minWidth': 5,

@@ -36,7 +36,7 @@ export class LoginPage {
     setTimeout(() => {
       loader.dismiss();
       this.navCtrl.push(TabsPage);
-    }, 3000);
+    }, 1000);
 
   }
 
