@@ -1,7 +1,11 @@
 import {Component, ViewChild} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {IonicPage,NavController, NavParams} from 'ionic-angular';
 import {SignaturePad} from 'angular2-signaturepad/signature-pad';
 
+@IonicPage({
+  name:'signaturepad',
+  segment:'signaturepad'
+})
 @Component({
   selector: 'page-signaturepad',
   templateUrl: 'signaturepad.html',

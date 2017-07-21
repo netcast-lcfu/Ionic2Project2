@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
-import {NavController, LoadingController, AlertController} from 'ionic-angular';
+import {IonicPage,NavController, LoadingController, AlertController} from 'ionic-angular';
 
+@IonicPage({
+  name:'home',
+  segment:'home'
+})
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -32,6 +36,10 @@ export class HomePage {
 
   showDateValue(){
     console.log(this.myDate);
+  }
+
+  GoToTest(){
+    this.navCtrl.push('test');
   }
 
 }

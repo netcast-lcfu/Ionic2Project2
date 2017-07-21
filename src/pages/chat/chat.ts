@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage({
+  name:'chat',
+  segment:'chat'
+})
 @Component({
   selector: 'page-chat',
   templateUrl: 'chat.html'

@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController,LoadingController, NavParams } from 'ionic-angular';
-import {TabsPage} from "../tabs/tabs";
+import {IonicPage, NavController,LoadingController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+@IonicPage({
+  name:'login',
+  segment:'login'
+})
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -35,7 +33,7 @@ export class LoginPage {
     loader.present();
     setTimeout(() => {
       loader.dismiss();
-      this.navCtrl.push(TabsPage);
+      this.navCtrl.push('tabs');
     }, 1000);
 
   }

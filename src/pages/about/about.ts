@@ -1,8 +1,10 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {SignaturepadPage} from '../signaturepad/signaturepad';
+import {IonicPage,NavController} from 'ionic-angular';
 
-
+@IonicPage({
+  name:'about',
+  segment:'about'
+})
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
@@ -14,7 +16,7 @@ export class AboutPage {
   }
 
   goToSignaturepad(): void {
-    this.navCtrl.push(SignaturepadPage,{title:'SignaturePad'});
+    this.navCtrl.push('signaturepad',{title:'签名'});
   }
 
 }
