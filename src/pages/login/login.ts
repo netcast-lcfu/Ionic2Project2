@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import {IonicPage, NavController,LoadingController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, LoadingController, NavParams} from 'ionic-angular';
 
 @IonicPage({
-  name:'login',
-  segment:'login'
+  name: 'login',
+  segment: 'login'
 })
 
 @Component({
@@ -12,21 +12,21 @@ import {IonicPage, NavController,LoadingController, NavParams } from 'ionic-angu
 })
 export class LoginPage {
 
-  public userInfo:any = {
-    username:'',
-    password:''
+  public userInfo: any = {
+    username: '',
+    password: ''
   };
 
-  constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  login(){
-    console.log('username:'+this.userInfo.username);
-    console.log('password:'+this.userInfo.password);
+  login() {
+    console.log('username:' + this.userInfo.username);
+    console.log('password:' + this.userInfo.password);
     let loader = this.loadingCtrl.create({
       content: "登录中..."
     });

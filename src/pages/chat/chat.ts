@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import {IonicPage, NavController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController} from 'ionic-angular';
 
 @IonicPage({
-  name:'chat',
-  segment:'chat'
+  name: 'chat',
+  segment: 'chat'
 })
 @Component({
   selector: 'page-chat',

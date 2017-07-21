@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { SignaturepadPage } from './signaturepad';
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {SignaturepadPage} from './signaturepad';
 import {SignaturePadModule} from 'angular2-signaturepad';
 
 @NgModule({
@@ -15,4 +15,5 @@ import {SignaturePadModule} from 'angular2-signaturepad';
     SignaturepadPage
   ]
 })
-export class SignaturepadPageModule {}
+export class SignaturepadPageModule {
+}

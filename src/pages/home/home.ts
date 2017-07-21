@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {IonicPage,NavController, LoadingController, AlertController} from 'ionic-angular';
+import {IonicPage, NavController, LoadingController, AlertController} from 'ionic-angular';
 
 @IonicPage({
-  name:'home',
-  segment:'home'
+  name: 'home',
+  segment: 'home'
 })
 @Component({
   selector: 'page-home',
@@ -11,7 +11,7 @@ import {IonicPage,NavController, LoadingController, AlertController} from 'ionic
 })
 
 export class HomePage {
-  public myDate :Object = new Date();
+  public myDate: Object = new Date();
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
 
@@ -34,11 +34,11 @@ export class HomePage {
     alert.present();
   }
 
-  showDateValue(){
+  showDateValue() {
     console.log(this.myDate);
   }
 
-  GoToTest(){
+  GoToTest() {
     this.navCtrl.push('test');
   }
 
