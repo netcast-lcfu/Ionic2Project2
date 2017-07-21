@@ -9,7 +9,7 @@ import {SignaturePadModule} from 'angular2-signaturepad';
   ],
   imports: [
     SignaturePadModule,
-    IonicPageModule.forChild(SignaturepadPage),
+    IonicPageModule.forChild(SignaturepadPage)
   ],
   exports: [
     SignaturepadPage

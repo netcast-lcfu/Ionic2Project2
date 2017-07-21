@@ -7,7 +7,7 @@ import {TestPage} from './test';
     TestPage,
   ],
   imports: [
-    IonicPageModule.forChild(TestPage),
+    IonicPageModule.forChild(TestPage)
   ],
   exports: [
     TestPage

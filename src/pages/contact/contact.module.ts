@@ -7,7 +7,7 @@ import {ContactPage} from './contact';
     ContactPage,
   ],
   imports: [
-    IonicPageModule.forChild(ContactPage),
+    IonicPageModule.forChild(ContactPage)
   ],
   exports: [
     ContactPage
