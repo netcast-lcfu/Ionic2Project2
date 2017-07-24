@@ -11,7 +11,7 @@ import {IonicPage, NavController, LoadingController, AlertController} from 'ioni
 })
 
 export class HomePage {
-  public myDate: Object = new Date();
+  public myDate: string = '2016-02-02';
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
 
