@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IonicPage, NavController, LoadingController, AlertController} from 'ionic-angular';
+import {ApiServiceProvider} from "../../providers/api-service/api-service";
 
 @IonicPage({
   name: 'home',
@@ -7,14 +8,24 @@ import {IonicPage, NavController, LoadingController, AlertController} from 'ioni
 })
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [ApiServiceProvider]
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
   public myDate: string = '2016-02-02';
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public  apiService: ApiServiceProvider) {
 
+  }
+
+  ngOnInit() {
+    this.apiService.load().then(data => {
+      console.log('get data success...');
+      console.log(data);
+    }, err => {
+      console.log('get data fail...' + err);
+    });
   }
 
   presentLoading() {
