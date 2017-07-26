@@ -15,17 +15,19 @@ import {ApiServiceProvider} from "../../providers/api-service/api-service";
 export class HomePage implements OnInit {
   public myDate: string = '2016-02-02';
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public  apiService: ApiServiceProvider) {
-
+  constructor(public navCtrl: NavController,
+              public loadingCtrl: LoadingController,
+              public alertCtrl: AlertController,
+              public  apiService: ApiServiceProvider) {
   }
 
   ngOnInit() {
-    this.apiService.load().then(data => {
-      console.log('get data success...');
-      console.log(data);
-    }, err => {
-      console.log('get data fail...' + err);
-    });
+    // this.apiService.load().then(data => {
+    //   console.log('get data success...');
+    //   console.log(data);
+    // }, err => {
+    //   console.log('get data fail...' + err);
+    // });
   }
 
   presentLoading() {

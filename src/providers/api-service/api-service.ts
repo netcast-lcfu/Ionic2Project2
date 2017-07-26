@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, RequestOptions} from '@angular/http';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -7,8 +7,8 @@ export class ApiServiceProvider {
   private data: any;
   private url: string = 'https://api.github.com/orgs/angular/members?page=1&per_page=5';
 
+  // private url: string = 'http://10.1.1.63:8090/api/AGENT_CLUSTER';
   constructor(public http: Http) {
-    console.log('Hello ApiServiceProvider Provider');
   }
 
   load() {

@@ -7,11 +7,49 @@
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown"
+                           pullingText="Pull to refresh"
+                           refreshingSpinner="circles"
+                           refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-list-header>Follow us on Github</ion-list-header>
+    <ion-item-sliding *ngFor="let contact of contactDatas" #item>
+      <button ion-item detail-none (click)="showContact(contact.id)">
+        <ion-avatar item-start>
+          <img [src]="contact.avatar_url">
+        </ion-avatar>
+        <h2>{{contact.id}}</h2>
+        <p>{{contact.login}}</p>
+        <ion-note item-end>10:00 am</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="secondary" (click)="more(contact,item)">
+          <!--<ion-icon name="menu"></ion-icon>-->
+          更多
+        </button>
+        <button ion-button color="danger" (click)="delete(contact,item)">
+          <!--<ion-icon name="trash"></ion-icon>-->
+          删除
+        </button>
+      </ion-item-options>
+
+      <!--<ion-item-options side="right">-->
+      <!--<button ion-button (click)="archive(contact,item)">-->
+      <!--<ion-icon name="archive"></ion-icon>-->
+      <!--Archive-->
+      <!--</button>-->
+      <!--</ion-item-options>-->
+
+      <!--<ion-item-options side="left">-->
+      <!--<button ion-button (click)="archive(contact,item)">-->
+      <!--<ion-icon name="archive"></ion-icon>-->
+      <!--Archive-->
+      <!--</button>-->
+      <!--</ion-item-options>-->
+    </ion-item-sliding>
   </ion-list>
 </ion-content>
