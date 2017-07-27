@@ -49,11 +49,13 @@ export class ContactPage implements OnInit {
 
   doRefresh(refresher): void {
     let contact = new Contact();
+    let contact1: Contact = {id: 10089, login: 'Test10089', avatar_url: this.contactDatas[1].avatar_url};
     contact.id = 10086;
-    contact.login = 'Test';
+    contact.login = 'Test10086';
     contact.avatar_url = this.contactDatas[0].avatar_url;
     setTimeout(() => {
       this.contactDatas.push(contact);
+      this.contactDatas.push(contact1);
       console.log('refresh success');
       refresher.complete();
     }, 2000);

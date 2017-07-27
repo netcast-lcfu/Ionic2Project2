@@ -19,24 +19,34 @@
     update any existing page or create new pages.
   </p>
 
-  <!-- 单选按钮 -->
-  <ion-list radio-group>
-    <ion-list-header>
-      Language
-    </ion-list-header>
+  <ion-list>
     <ion-item>
-      <ion-label>Go</ion-label>
-      <ion-radio checked="true" value="go"></ion-radio>
+      <ion-label>Language</ion-label>
+      <ion-select [(ngModel)]="language">
+        <ion-option value="java">JAVA</ion-option>
+        <ion-option value="c#">C#</ion-option>
+        <ion-option value="phytho">Phytho</ion-option>
+        <ion-option value="go">Go</ion-option>
+        <ion-option value="js">JavaScript</ion-option>
+      </ion-select>
     </ion-item>
+    <!--</ion-list>-->
+
+    <!--<ion-list>-->
     <ion-item>
-      <ion-label>Rust</ion-label>
-      <ion-radio value="rust"></ion-radio>
+      <ion-label>Gaming</ion-label>
+      <ion-select [multiple]="true" [(ngModel)]="gaming">
+        <ion-option value="nes">NES</ion-option>
+        <ion-option value="n64">Nintendo64</ion-option>
+        <ion-option value="ps">PlayStation</ion-option>
+        <ion-option value="genesis">Sega Genesis</ion-option>
+        <ion-option value="saturn">Sega Saturn</ion-option>
+        <ion-option value="snes">SNES</ion-option>
+      </ion-select>
     </ion-item>
-    <ion-item>
-      <ion-label>Python</ion-label>
-      <ion-radio value="python"></ion-radio>
-    </ion-item>
+    <button ion-button block (click)="doSubmit()">Submit</button>
   </ion-list>
+
 
   <!-- 卡片 -->
   <ion-card>

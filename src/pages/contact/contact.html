@@ -16,7 +16,7 @@
   </ion-refresher>
   <ion-list>
     <ion-list-header>Follow us on Github</ion-list-header>
-    <ion-item-sliding *ngFor="let contact of contactDatas" #item>
+    <ion-item-sliding *ngFor="let contact of contactDatas" #slidingItem>
       <button ion-item detail-none (click)="showContact(contact.id)">
         <ion-avatar item-start>
           <img [src]="contact.avatar_url">
@@ -27,11 +27,11 @@
       </button>
 
       <ion-item-options>
-        <button ion-button color="secondary" (click)="more(contact,item)">
+        <button ion-button color="secondary" (click)="more(contact,slidingItem)">
           <!--<ion-icon name="menu"></ion-icon>-->
           更多
         </button>
-        <button ion-button color="danger" (click)="delete(contact,item)">
+        <button ion-button color="danger" (click)="delete(contact,slidingItem)">
           <!--<ion-icon name="trash"></ion-icon>-->
           删除
         </button>

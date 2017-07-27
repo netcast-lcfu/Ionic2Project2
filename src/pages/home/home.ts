@@ -1,5 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {IonicPage, NavController, LoadingController, AlertController} from 'ionic-angular';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  IonicPage,
+  NavController,
+  LoadingController,
+  AlertController
+} from 'ionic-angular';
 import {ApiServiceProvider} from "../../providers/api-service/api-service";
 
 @IonicPage({
@@ -12,13 +20,17 @@ import {ApiServiceProvider} from "../../providers/api-service/api-service";
   providers: [ApiServiceProvider]
 })
 
+
 export class HomePage implements OnInit {
-  public myDate: string = '2016-02-02';
+  private myDate: string = '2016-02-02';
+  private language: string = 'java';
+  private gaming: Array<string> = ['nes', 'n64', 'ps'];
 
   constructor(public navCtrl: NavController,
               public loadingCtrl: LoadingController,
               public alertCtrl: AlertController,
               public  apiService: ApiServiceProvider) {
+
   }
 
   ngOnInit() {
@@ -53,6 +65,11 @@ export class HomePage implements OnInit {
 
   GoToTest() {
     this.navCtrl.push('test');
+  }
+
+  doSubmit() {
+    console.log(this.language);
+    console.log(this.gaming);
   }
 
 }
