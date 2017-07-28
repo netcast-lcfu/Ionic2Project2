@@ -33,7 +33,7 @@ export class HomePage implements OnInit {
               public alertCtrl: AlertController,
               public actionSheetCtrl: ActionSheetController,
               public popoverCtrl: PopoverController,
-              public  apiService: ApiServiceProvider) {
+              public apiService: ApiServiceProvider) {
 
   }
 
