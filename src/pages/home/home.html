@@ -1,12 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <button ion-button block (click)="presentLoading()">Show Loading</button>
   <button ion-button block (click)="showAlert()">Alert</button>
+  <button ion-button block (click)="presentActionSheet()">ShowActionSheet</button>
   <button ion-button block (click)="showDateValue()">Show Date Value</button>
   <button ion-button block (click)="GoToTest()">GoToTest</button>
   <button ion-button block (click)="GoToTestModals()">GoToTestModals</button>

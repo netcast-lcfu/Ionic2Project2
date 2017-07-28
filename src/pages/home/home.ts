@@ -6,7 +6,9 @@ import {
   IonicPage,
   NavController,
   LoadingController,
-  AlertController
+  AlertController,
+  ActionSheetController,
+  PopoverController
 } from 'ionic-angular';
 import {ApiServiceProvider} from "../../providers/api-service/api-service";
 
@@ -29,6 +31,8 @@ export class HomePage implements OnInit {
   constructor(public navCtrl: NavController,
               public loadingCtrl: LoadingController,
               public alertCtrl: AlertController,
+              public actionSheetCtrl: ActionSheetController,
+              public popoverCtrl: PopoverController,
               public  apiService: ApiServiceProvider) {
 
   }
@@ -42,12 +46,49 @@ export class HomePage implements OnInit {
     // });
   }
 
+  presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Modify your album',
+      buttons: [
+        {
+          text: 'Destructive',
+          role: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },
+        {
+          text: 'Archive',
+          handler: () => {
+            console.log('Archive clicked');
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+
+    actionSheet.present();
+  }
+
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
       duration: 3000
     });
     loader.present();
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create('popover-content');
+    popover.present({
+      ev: myEvent
+    });
   }
 
   showAlert() {

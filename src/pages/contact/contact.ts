@@ -48,11 +48,8 @@ export class ContactPage implements OnInit {
   }
 
   doRefresh(refresher): void {
-    let contact = new Contact();
-    let contact1: Contact = {id: 10089, login: 'Test10089', avatar_url: this.contactDatas[1].avatar_url};
-    contact.id = 10086;
-    contact.login = 'Test10086';
-    contact.avatar_url = this.contactDatas[0].avatar_url;
+    let contact: Contact = {id: 10086, login: 'Test10086', avatar_url: 'assets/img/pic1.jpg'};
+    let contact1: Contact = {id: 10089, login: 'Test10089', avatar_url: 'assets/img/pic2.jpg'};
     setTimeout(() => {
       this.contactDatas.push(contact);
       this.contactDatas.push(contact1);
@@ -80,8 +77,20 @@ export class ContactPage implements OnInit {
   }
 
   delete(contact, slidingItem: ItemSliding) {
+    this.removeOne(this.contactDatas, contact);
     console.log(contact);
     slidingItem.close();
   }
+
+
+  removeOne(arrays, val) {
+    for (var i = 0; i < arrays.length; i++) {
+      if (arrays[i] == val) {
+        arrays.splice(i, 1);
+        break;
+      }
+    }
+  }
+
 
 }
