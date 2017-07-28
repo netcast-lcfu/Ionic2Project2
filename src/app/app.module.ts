@@ -12,7 +12,7 @@ import {StorageServiceProvider} from '../providers/storage-service/storage-servi
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {tabsHideOnSubPages: 'true'}) //进入
   ],
   bootstrap: [IonicApp],
   entryComponents: [

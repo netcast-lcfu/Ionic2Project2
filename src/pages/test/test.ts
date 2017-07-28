@@ -13,9 +13,10 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 @Component({
   selector: 'page-test',
-  templateUrl: 'test.html',
+  templateUrl: 'test.html'
 })
 export class TestPage {
+  pet: string = "puppies";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

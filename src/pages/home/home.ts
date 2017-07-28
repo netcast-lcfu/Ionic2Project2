@@ -67,6 +67,10 @@ export class HomePage implements OnInit {
     this.navCtrl.push('test');
   }
 
+  GoToTestModals() {
+    this.navCtrl.push('modals');
+  }
+
   doSubmit() {
     console.log(this.language);
     console.log(this.gaming);
