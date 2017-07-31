@@ -16,6 +16,11 @@
   <button ion-button block (click)="saveSignature()">保存</button>
   <button ion-button block (click)="clearSignaturePad()">清空</button>
 
-  <!--<img src="{{imgSrc}}"/>-->
+  <ion-card *ngIf="imgSrc != ''">
+    <ion-card-header>签名图片如下:</ion-card-header>
+    <ion-card-content>
+      <img src="{{imgSrc}}"/>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
