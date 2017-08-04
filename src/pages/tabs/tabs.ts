@@ -11,9 +11,10 @@ import {IonicPage} from 'ionic-angular';
 export class TabsPage {
 
   tab1Root = 'home';
-  tab2Root = 'about';
-  tab3Root = 'contact';
-  tab4Root = 'chat';
+  tab2Root = 'contact';
+  tab3Root = 'chat';
+  tab4Root = 'about';
+  tab5Root = 'setting';
   constructor() {
 
   }
